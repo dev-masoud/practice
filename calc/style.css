@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+*,*::after,*::before{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: rgb(146,255,145);
+    background: linear-gradient(90deg, rgba(146,255,145,1) 0%, rgba(0,255,255,1) 100%); 
+
+}
+
+
+.cal-container{
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows:minmax(120px,auto) repeat(5,100px);
+
+}
+
+.cal-container>button{
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background: rgba(170, 255, 248, 0.753);
+}
+
+.cal-container>button:hover{
+    background: rgba(230, 255, 253, 0.9);
+
+}
+.span-two{
+    grid-column: span 2;
+}
+
+
+.output{
+    grid-column: 1/-1;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .sm-screen {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+  }
+  
+  .output .bg-screen {
+    color: white;
+    font-size: 2.5rem;
+  }
